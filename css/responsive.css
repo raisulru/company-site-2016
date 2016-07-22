@@ -1,0 +1,27 @@
+@media screen and (max-width: 480px) {
+    #text-slider .item {
+        font-size: 150%;
+        padding: 0 2%;
+    }
+    /*responsive css for update from*/
+    .update-form {
+        padding: 0;
+        height: 100px;
+    }
+    .update-form>form>div>input[type="eamil"] {
+        font-size: 16px;
+        line-height: 78px;
+    }
+    .btnswip {
+        font-size: 14px;
+        height: 50px;
+        margin: 16px 0px 0px 0px;
+    }
+    /*update form*/
+}
+
+@media (min-width: 481px) and (max-width: 768px) {}
+
+@media (min-width: 769px) and (max-width: 1000px) {}
+
+@media (min-width: 1400px) {}

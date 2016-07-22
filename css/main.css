@@ -1,0 +1,768 @@
+/* css for oasis IT web */
+/* body css */
+
+body{
+	background-color: #fff;
+	position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+/* all h2,h3 element css*/
+h2,h3{
+	text-transform: uppercase;
+	color: rgb(208, 50, 60);
+	margin: 3% 0;
+	text-align: center;
+}
+p{
+	font-size: 16px;
+	line-height: 30px;
+	text-align: justify;
+	margin: 0 auto;
+}
+button:hover,
+button:focus,
+button:active,
+input:hover,
+input:focus,
+input:active {
+    outline: none;
+    background: #ffffff;
+}
+
+nav#fixed-nav{
+	display: none;
+}
+nav#fixed-nav.fadeInDown,
+nav#fixed-nav.fadeOut{
+	background-color: rgb(208, 50, 60);
+	box-shadow: 0px 1px 5px 1px gray;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+	transition: .5s;
+    border: none;
+}
+#myNavbar ul:first-child{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+nav#fixed-nav ul li a{
+	color: #fff;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+nav#fixed-nav ul li a:hover{
+	color: rgb(0, 0, 0);
+}
+#myNavbar ul li.active a{
+	background-color: #fff;
+	color: rgb(0, 0, 0);
+}
+#fixed-nav .navbar-header button{
+    background-color: #fff;
+}
+#fixed-nav .navbar-header button span{
+    color: rgb(0, 0, 0) !important;
+}
+#fixed-nav .navbar-brand svg{
+    z-index: 9999;
+    position: absolute;
+    width: 11%;
+    top: 3px;
+}
+svg g{
+    fill: #fff;
+}
+/* top header========================================= css */
+#header{
+	background-image: url('../img/picjumbo.com_IMG_4340.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	padding: 5% 0;
+}
+/* text slider content css */
+#text-slider h2{
+	color: #fff;
+    font-size: 260%;
+    position: relative;
+    bottom: 17px;
+}
+/* carousel fade in fade out css */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+/* logo css */
+.logo object{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1%;
+    border: 1px solid rgba(251, 251, 251, 0.33);
+    width: 20%;
+    fill: red;
+}
+.logo object.svg-class svg {
+    fill: red;
+}
+
+/* navigation css */
+.navigation{
+	padding: 5% 0;
+}
+.navigation a{
+	color: rgb(255, 255, 255);
+    padding: 1%;
+    font-size: 20px;
+}
+.navigation a:hover{
+	text-decoration-color: rgb(208, 50, 60);
+}
+.search-icon{
+	cursor: pointer;
+}
+/* css for search box */
+nav.fadeInDown + div.search{
+	background-color: rgba(208, 50, 60,.5);
+    position: fixed;
+    width: 100%;
+    padding: 5% 25%;
+    top: 52px;
+    z-index: 999;
+    display: none;
+}
+div.search{
+	background-color: rgba(208, 50, 60,.5);
+    position: absolute;
+    width: 100%;
+    padding: 5% 25%;
+    top: 257px;
+    z-index: 999;
+    display: none;
+}
+button.btn-close{
+	position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index:999;
+}
+/* social navigation css */
+.social{
+	padding: 6% 0;
+}
+.social nav a{
+	color: #fff;
+    background-color: gray;
+    padding: 4px 9px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 20px;
+}
+.social nav a:first-child{
+	padding: 4px 12px;
+}
+.social nav a:hover{
+	background-color: rgb(208, 50, 60);
+}
+/* css for button */
+.down-button a{
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: rgb(255, 255, 255);
+	padding: 20px 5px;
+	font-size: 20px;
+}
+/* about ===================================== css */
+#about{
+	padding: 5% 0;
+	background-color: rgba(173,172,188,.15);
+}
+#about p{
+	width: 80%;
+}
+#about button{
+	background-color: rgb(255, 255, 255);
+	color: rgb(35, 31, 32);
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 12px 25px;
+	margin-top: 4%;
+	border: 1px solid rgb(208, 50, 60);
+	border-radius: 0;
+}
+
+/* services ===============================================css */
+
+#services {
+	background-color: #ffffff;
+	padding-top:1em;
+}
+
+#services .services {
+	background-color: rgba(173,172,188,.15);
+}
+
+#services .container-fluid{
+	padding: 0;
+}
+/* services content css */
+#services .services-content{
+	text-align: center;
+	padding: 0;
+	
+}
+#services .services-content h3{
+	color: rgb(0, 0, 0);
+}
+#services .services-content img{
+	width: 100%;
+}
+/* services all text content css */
+
+#services .text-content p a{
+	/* font-size: 20px; */
+	color: rgb(208, 50, 60);
+	padding-left: 10px;
+}
+/* positional css for all text content */
+#training .text-content{
+	padding: 19% 12%;
+}
+#system-solution .text-content{
+	 padding: 20% 12%;
+}
+#web-product .text-content{
+	padding: 25% 12%;
+}
+/* css written by shuvo */
+
+/*career section css*/
+#career{
+    color: #fff;
+    padding-top: 1em;
+}
+#career h3{
+    color: #fff;
+}
+#career .container{
+    background-image: url('../img/slider2.png');
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+}
+#career .career{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#career-slider .item{
+    padding: 50px 0;
+}
+#career-slider .item p{
+    /* padding: 0 10% 6%; */
+    text-align: justify;
+    width: 80%;
+}
+#career-slider .carousel-control{
+    background-image: none;
+    /* background-color: green; */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#career-slider .carousel-control i.fa{
+    position: absolute;
+    top: 50%;
+    font-size: 150%;
+    padding: 0;
+    margin: 0 auto;
+    /* display: block; */
+    /* background: red; */
+    left: 40%;
+}
+#career .career-search{
+    padding:2%;
+    font-size: 18px;
+}
+#career .career-search input{
+    background-color: transparent;
+    text-align: center;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.carousel-control{
+	width:10%;
+
+}
+/*drop cv section css*/
+.cv-droper{
+	background-color: rgba(173,172,188,.15);
+	padding-top: 1em;
+}
+
+.cv-droper>div>div>p {
+    padding: 0%;
+    width: 80%;
+}
+.cv-droper form{
+    padding: 4%;
+}
+.cv-droper form input,
+.cv-droper form label{
+    display: inline-block;
+    color: rgb(208, 50, 60);
+    font-size: 100%;
+    font-weight: normal;
+    background-color: transparent;
+    border: 1px solid rgb(208, 50, 60);
+    padding: 10px 3%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+    margin-right: 10px;
+}
+.cv-droper form input:hover,
+.cv-droper form label:hover{
+    background-color: rgb(208, 50, 60);
+    color: #fff;
+}
+.cv-droper form input[type=file]{
+    display: none;
+}
+.cv-droper form input[type=submit]{
+    
+}
+
+
+/*gallary section css*/
+
+
+#gallary img{
+    width: 24.7%;
+    display: inline-block;
+}
+
+/*contact and mapping section css*/
+
+
+/*contacr form*/
+
+#contact {
+    
+    padding-top: 1em;
+    margin-bottom: -5px;
+}
+
+.contact-form.col-sm-6 {
+    background: rgba(128, 128, 128, 1);
+    padding: 4% 8% 2% 8%;
+}
+
+.contact-form>p {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 4%;
+}
+
+.contact-form .form-control {
+    border: 1px solid rgba(204, 204, 204, 0.5);
+   
+}
+
+#contact input,
+#contact textarea {
+    font-size: 16px;
+}
+
+.form-horizontal>div:first-of-type>.form-control,
+.form-horizontal>div:nth-of-type(2)>.form-control,
+.form-horizontal>div:last-of-type>button {
+    min-width: 100%;
+    height: 40px;
+}
+
+#contact input[type=submit] {
+    width: 100%;
+    padding: 7px;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: bold;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+#contact input[type=submit]:hover,
+#about button:hover,
+.request button:hover {
+    background-color: rgb(208, 50, 60);
+    color: #fff;
+    border-color: rgb(208, 50, 60);
+    transition: .4s;
+    -webkit-transition: .4s;
+}
+
+
+/*google map*/
+
+.google-map.col-sm-6 {
+    padding: 0;
+    margin: auto;
+}
+
+
+/*footer section css*/
+
+.footer {
+    background: rgb(208, 50, 60);
+    position: relative;
+    z-index: 999;
+}
+
+.footer>div>div>h2 {
+    color: white;
+    font-weight: 500;
+    padding: 2% 0% 3% 0%;
+}
+
+.update.col-xs-12 {
+    margin: 0% 0% 4% 0%;
+}
+
+.update-form {
+    padding: 0;
+    background: #fff;
+    border: 10px solid #d0323c;
+    border-radius: 70px;
+   
+    height: 120px;
+}
+
+.update>div,
+.update-form>form>div {
+
+    font-size: 20px;
+}
+
+.update-form>form>div>input {
+    border: none;
+    border-style: none;
+    outline: none;
+}
+
+.update-form>form>div>input[type="eamil"] {
+
+    width: 100%;
+
+    background: transparent;
+    line-height: 100px;
+}
+
+
+/**/
+
+.btnswip {
+    width: 100%;
+    line-height: 38px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 70px;
+    height: 50px;
+    margin: 25px 0 0;
+    background-color: rgba(128, 128, 128, 1);
+    color: #fff;
+}
+
+.btnswip:hover,.btnswip:active,.btnswip:visited{
+color:white;
+    background:rgb(208, 50, 60);
+}
+.footer>div>div>div,
+.update>div:first-of-type,
+.update>div:last-of-type {
+    
+    padding: 0;
+}
+
+.update {
+    background: url(../img/while_line.gif) repeat-x 50%;
+}
+.social>nav {
+    margin-top: 2%;
+}
+
+
+
+.copyright footer {
+    text-align: center;
+    padding: 3%;
+    color: #fff;
+}
+/* ==============training.html page css start=========================== */
+/* training tab menu css */
+#training-inner{
+    padding-top: 4%;
+}
+#training-inner .tab-content{
+    padding: 0 4% 0 8%;
+}
+#training-inner h3{
+    text-align:left;
+    border-bottom: 1px solid rgb(208, 50, 60);
+}
+#training-inner .our-training h3{
+    background-color: rgb(208, 50, 60);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10% 0;
+    padding: 2%;
+}
+#training-inner .our-training ul{
+    border: none;
+    list-style-type: square;
+    overflow: hidden;
+}
+#training-inner .our-training ul li a{
+    color:rgb(0, 0, 0);
+    font-size: 120%;
+}
+#training-inner .our-training ul li{
+    width:100%;
+    margin: 1% 0;
+}
+#training-inner .our-training ul li.active a{
+    border: none;
+    color: rgb(208, 50, 60);
+    text-decoration: underline;
+}
+/* special offer css */
+#training-inner .offer{
+    box-shadow: .1px .1px 4px .1px rgba(0, 0, 0, 0.5);
+    padding: 2%;
+    margin-top: 48%;
+    background-color: #F4F4F4;
+}
+#training-inner .offer h3{
+    border: none;
+    text-align: center;
+}
+#training-inner .offer h4{
+    font-weight: bold;
+}
+.offer .discount{
+    background-color: rgb(208, 50, 60);
+    color: #fff;
+    text-align: center;
+    padding: 1% 0;
+}
+#training-inner .offer form{
+    margin: 10% 0;
+}
+.offer form a{
+    float: right;
+    margin-top: 14px;
+}
+.offer form button{
+    background-color: rgb(208, 50, 60);
+}
+/* training offer css end */
+.course-outline{
+    padding:2% 0;
+}
+.trainer{
+    padding: 2% 0;
+}
+.trainer h4,h5{
+    font-weight:bold;
+}
+.shedule{
+    padding: 2% 0;
+}
+.career-route img{
+    width:100%;
+}
+.course-shedule{
+    padding: 2% 0;
+}
+.course-shedule table{
+    width: 100%;
+}
+.course-shedule table tr{
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+th,td{
+    padding: 5px;
+    font-size: 18px;
+}
+/* css for call back request */
+
+.request{
+    margin: 5% 0;
+}
+.request table{
+    background-color: #fff;
+    width: 100%;
+}
+.request table td{
+    width: 33.33%;
+    border: 1px solid rgb(208, 50, 60);
+    padding: 2%;
+    font-size: 150%;
+    color: rgb(208, 50, 60);
+}
+.request table td:nth-child(2){
+    width: 15%;
+    background-color: rgb(208,50,60);
+    color: #fff;
+    text-transform: uppercase;
+}
+.request button{
+    border: 1px solid rgb(208, 50, 60);
+    color: rgb(208, 50, 60);
+    font-size: 105%;
+    margin-top: 2%;
+    background-color:#fff;
+}
+
+.request button:active,
+.request button:focus{
+    outline: none;
+}
+.modal{
+    top:10%;
+}
+.modal h4{
+    font-size: 200%;
+    font-weight: bold;
+}
+
+/*system service*/
+div#system-inner {
+    margin: 8% 0% 0% 0%;
+}
+.system-header {
+    letter-spacing: 2px;
+    text-align: left;
+    margin: 0px;
+}
+div#system-inner>div>div,
+div#system-portfolio>div>div,
+div#system-provider>div>div {
+    padding: 0px;
+}
+div#system-inner>div:first-of-type>div:last-of-type,
+div#system-provider>div:first-of-type>div:last-of-type,
+div#system-portfolio>div:first-of-type>div:last-of-type {
+    border-bottom: 1px solid gray;
+    margin: 2% 0% 0% 0%;
+}
+#system-inner>div:last-of-type>p {
+    margin: 2% 9% 6% 9%;
+}
+.system-work>h4 {
+    font-size: 195%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2% 0%;
+}
+.system-work>p {
+    padding: 0% 9% 3% 9%;
+}
+.system-work>p>span {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.system-work>p>i {}
+
+/*system provider*/
+div#system-provider {
+    margin-top: 4%;
+}
+#system-provider>div:last-of-type {
+    border: 1px solid rgb(208, 50, 60);
+    margin: 2% 1% 8% 1%;
+}
+#system-provider>div:last-of-type>div {
+    padding: 2% 0%;
+}
+#system-provider>div:last-of-type>div:first-of-type {
+    padding-left: 5%;
+}
+#system-provider>div:last-of-type>div:last-of-type {
+    padding-right: 7%;
+}
+ul.service-nav {
+    margin: 10% 0% 0% 0%;
+}
+.service-nav>li {
+    margin: 4% 0% 0% 0%;
+    list-style-type: none;
+}
+.service-nav> li>a {
+    color: black;
+    text-transform: uppercase;
+    font-size: 109%;
+    font-weight: 600;
+}
+.service-nav>li>a>i {
+    font-size: 12px;
+}
+.service-nav>li>a:hover,
+.service-nav>li>a:active,
+.service-nav>li>a:visited {
+    color: rgb(208, 50, 60);
+}
+
+/*system portfolio*/
+div#system-portfolio {
+    margin: 0% 0% 4% 0%;
+}
+div#system-portfolio>div {
+    margin: 0% 0% 2% 0%;
+}
+.portfolio-img>div {
+    padding: 0px;
+}
