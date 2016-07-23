@@ -80,7 +80,9 @@ svg g{
 	background-image: url('../img/picjumbo.com_IMG_4340.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-	padding: 5% 0;
+    padding: 5% 0;
+    background-attachment: fixed;
+    background-position: right;
 }
 /* text slider content css */
 #text-slider h2{
@@ -546,7 +548,7 @@ color:white;
     padding-top: 4%;
 }
 #training-inner .tab-content{
-    padding: 0 4% 0 8%;
+    padding: 0 1% 0 8%;
 }
 #training-inner h3{
     text-align:left;
