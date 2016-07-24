@@ -32,6 +32,9 @@ input:active {
 nav#fixed-nav{
 	display: none;
 }
+#fixed-nav.navbar{
+    border: none;
+}
 nav#fixed-nav.fadeInDown,
 nav#fixed-nav.fadeOut{
 	background-color: rgb(208, 50, 60);
@@ -41,12 +44,11 @@ nav#fixed-nav.fadeOut{
 	width: 100%;
 	z-index: 99999;
 	transition: .5s;
-    border: none;
+    border: none !important;
 }
 #myNavbar ul:first-child{
-    width: 95%;
-    display: flex;
-    justify-content: center;
+    position:relative;
+    left: 31%;
 }
 nav#fixed-nav ul li a{
 	color: #fff;
@@ -71,6 +73,7 @@ nav#fixed-nav ul li a:hover{
     position: absolute;
     width: 11%;
     top: 3px;
+    margin-left: -3px;
 }
 svg g{
     fill: #fff;
@@ -82,7 +85,7 @@ svg g{
     background-size: cover;
     padding: 5% 0;
     background-attachment: fixed;
-    background-position: right;
+    background-position: inherit;
 }
 /* text slider content css */
 #text-slider h2{
@@ -548,7 +551,7 @@ color:white;
     padding-top: 4%;
 }
 #training-inner .tab-content{
-    padding: 0 1% 0 8%;
+    padding: 0 2% 0 8%;
 }
 #training-inner h3{
     text-align:left;
