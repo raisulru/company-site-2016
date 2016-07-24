@@ -383,10 +383,12 @@ button.btn-close{
 
 
 /*gallary section css*/
-
+#gallary .col-md-3{
+    padding: 0;
+}
 
 #gallary img{
-    width: 24.7%;
+    width: 100%;
     display: inline-block;
 }
 
