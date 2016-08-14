@@ -38,7 +38,7 @@ nav#fixed-nav{
 nav#fixed-nav.fadeInDown,
 nav#fixed-nav.fadeOut{
 	background-color: rgb(208, 50, 60);
-	box-shadow: 0px 1px 5px 1px gray;
+	box-shadow: 0px 1px 5px 3px rgba(150,150,150,.25);
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -71,7 +71,7 @@ nav#fixed-nav ul li a:hover{
 #fixed-nav .navbar-brand svg{
     z-index: 9999;
     position: absolute;
-    width: 11%;
+    height: 45px;
     top: 3px;
     margin-left: -3px;
 }
@@ -80,13 +80,18 @@ svg g{
 }
 /* top header========================================= css */
 #header{
-	background-image: url('../img/picjumbo.com_IMG_4340.jpg');
+	background-image:linear-gradient(
+      rgba(255, 255, 255, 0.5),rgba( 255, 0,0, 0.15)
+      
+      
+    ), url('../img/picjumbo.com_IMG_4340.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 5% 0;
-    background-attachment: fixed;
+    background-attachment: scroll,fixed;
     background-position: inherit;
 }
+
 /* text slider content css */
 #text-slider h2{
 	color: #fff;
